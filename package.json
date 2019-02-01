@@ -1,0 +1,14 @@
+{
+  "name": "Ethereum-Lottery",
+  "version": "1.0.0",
+  "description": "Simple lottery contract.",
+  "main": "index.js",
+  "author": "Kevin-Geoffery O'Hearon",
+  "license": "MIT",
+  "scripts": {
+    "compile": "node compile.js"
+  },
+  "devDependencies": {
+    "solc": "^0.5.3"
+  }
+}
