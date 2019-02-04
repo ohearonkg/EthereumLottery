@@ -1,14 +1,20 @@
 {
-  "name": "Ethereum-Lottery",
-  "version": "1.0.0",
-  "description": "Simple lottery contract.",
-  "main": "index.js",
-  "author": "Kevin-Geoffery O'Hearon",
-  "license": "MIT",
-  "scripts": {
-    "compile": "node compile.js"
-  },
-  "devDependencies": {
-    "solc": "^0.5.3"
-  }
+    "name": "Ethereum-Lottery",
+    "version": "1.0.0",
+    "description": "Simple lottery contract.",
+    "main": "index.js",
+    "author": "Kevin-Geoffery O'Hearon",
+    "license": "MIT",
+    "scripts": {
+        "compile": "node compile.js",
+        "test": "jest"
+    },
+    "devDependencies": {
+        "ganache-cli": "^6.3.0",
+        "jest": "^24.0.0",
+        "solc": "^0.5.3"
+    },
+    "dependencies": {
+        "web3": "1.0.0-beta.35"
+    }
 }
