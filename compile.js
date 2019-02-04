@@ -13,7 +13,7 @@ const lotterySource = fs.readFileSync(lotteryPath, "UTF-8").toString();
 const input = {
     language: "Solidity",
     sources: {
-        "Lotter.sol": {
+        "Lottery.sol": {
             content: lotterySource
         }
     },
@@ -29,4 +29,12 @@ const input = {
 /**
  * Compile using solidity compiler
  */
-module.exports = solc.compile(JSON.stringify(input))[":Lottery"];
+const output = JSON.parse(solc.compile(JSON.stringify(input))).contracts[
+    "Lottery.sol"
+]["Lottery"];
+
+const bytecode = output["evm"]["bytecode"]["object"];
+
+const abi = output["abi"];
+
+module.exports = { abi: abi, bytecode: bytecode };
